@@ -10,11 +10,11 @@ export const StaticI18nLink = (props) => {
 
   if (!locale) {
     const href = props.href || router.asPath
-    return <Link {...props} href={href}></Link>
+    return <Link {...props} href={href} locale={locale}></Link>
   } else {
     const href = props.href
       ? `/${locale}${props.href}`
       : router.pathname.replace('[locale]', locale)
-    return <Link {...props} href={href} locale={undefined}></Link>
+    return <Link {...props} href={href} locale={locale}></Link>
   }
 }
