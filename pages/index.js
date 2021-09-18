@@ -1,18 +1,18 @@
-import i18nextConfig from '../next-i18next.config'
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import i18nextConfig from "../next-i18next.config";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 export const getStaticProps = () => {
-  const { locales } = i18nextConfig.i18n
+  const { locales } = i18nextConfig.i18n;
   return {
     props: {
       locales,
     },
-  }
-}
+  };
+};
 
 const Index = ({ locales }) => {
-  const router = useRouter()
+  const router = useRouter();
 
   // language detection
   // not recommended for production, use server redirection instead of this
@@ -28,7 +28,7 @@ const Index = ({ locales }) => {
   //   }
   // }, [])
 
-  return <></>
-}
+  return <></>;
+};
 
-export default Index
+export default Index;
